@@ -15,20 +15,15 @@ addBtn.addEventListener('click', () =>{
         const newTask = document.createElement('div');
         newTask.classList.add('list');
         newTask.innerHTML = `
-        <span>${inputTask.value}</span>
-        <div class="btn-del">
-        <input type="checkbox" id="btn_completed">
-       
-     </div>
-        `;
+    <input type="checkbox" id="btn_completed">
+    <span>${inputTask.value}</span>
+`;
         task.appendChild(newTask)
-        inputTask.value = '';
     }
 })
 
-task.addEventListener('click', (e) =>{
-    if(document.getElementById('btn_completed').checked){
-        e.target.parentElement.parentElement.remove();
-
+task.addEventListener('click', (e) => {
+    if (e.target.tagName === 'INPUT' && e.target.type === 'checkbox' && e.target.checked) {
+        e.target.parentElement.remove();
     }
-})
+});
