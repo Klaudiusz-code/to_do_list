@@ -16,7 +16,9 @@ body{
 }
 
 .todo{
+
     margin-top: 150px;
+    text-align: center;
 }
 .todo{
     width: 500px;
@@ -25,6 +27,9 @@ body{
     display: grid;
     grid-template-columns: 4fr 1fr;
     gap: 20px;
+}
+.todo-title{
+    padding: 10px;
 }
 .input{
     background-color: transparent;
